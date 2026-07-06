@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+
+<body style="background-color: cornflowerblue ; color: aliceblue;">
+
+<div class="container">
+    <h2>Simple Interest Calculator</h2>
+
+    <label for="principal">Principal Amount :</label>
+    <input type="number" id="principal" placeholder="Enter Principal"><br>
+
+    <label for="rate">Interest Rate :</label>
+    <input type="number" id="rate" placeholder="Enter Interest Rate"><br>
+
+    <label for="time">Time Years:</label>
+    <input type="number" id="time" placeholder="Enter Time"><br>
+
+    <button onclick="calculateSI()">Calculate Interest</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+function calculateSI() {
+    let p = parseFloat(document.getElementById("principal").value);
+    let r = parseFloat(document.getElementById("rate").value);
+    let n = parseFloat(document.getElementById("time").value);
+
+
+    let si = (p * r * n) / 100;
+
+    document.getElementById("result").style.color = "green";
+    document.getElementById("result").innerHTML =
+        "Simple Interest = Rs. " + si;
+}
+</script>
+
+</body>
+</html>
